@@ -14,9 +14,21 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Slider } from "@/components/ui/slider";
 import { getImageUrl, getImageHint } from "@/lib/data";
+import { useEffect, useState } from "react";
 
 const MusicPlayer = () => {
   const { currentSong, isPlaying, togglePlayPause, progress } = useMusic();
+  const [duration, setDuration] = useState(0);
+
+  useEffect(() => {
+    if (currentSong) {
+      const audio = new Audio(currentSong.audioUrl);
+      audio.addEventListener('loadedmetadata', () => {
+        setDuration(audio.duration);
+      });
+    }
+  }, [currentSong]);
+  
 
   if (!currentSong) {
     return (
@@ -25,9 +37,17 @@ const MusicPlayer = () => {
       </footer>
     );
   }
+  
+  const formatTime = (time: number) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  }
 
   const imageUrl = getImageUrl(currentSong.imageId);
   const imageHint = getImageHint(currentSong.imageId);
+  const currentTime = (progress / 100) * duration;
+
 
   return (
     <footer className="h-24 bg-card/60 border-t backdrop-blur-sm p-4 flex items-center justify-between">
@@ -70,14 +90,11 @@ const MusicPlayer = () => {
         </div>
         <div className="w-full flex items-center gap-2">
           <span className="text-xs text-muted-foreground w-10 text-right">
-            {Math.floor((progress * (3 * 60 + 45)) / 100 / 60)}:
-            {(Math.floor((progress * (3 * 60 + 45)) / 100) % 60)
-              .toString()
-              .padStart(2, "0")}
+            {formatTime(currentTime)}
           </span>
           <Progress value={progress} className="h-1" />
           <span className="text-xs text-muted-foreground w-10">
-            {currentSong.duration}
+            {formatTime(duration)}
           </span>
         </div>
       </div>

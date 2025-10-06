@@ -7,10 +7,11 @@ export type Song = {
   album: string;
   duration: string;
   imageId: string;
+  audioUrl: string;
 };
 
 export type Artist = {
-  id: string;
+  id:string;
   name: string;
   imageId: string;
 };
@@ -50,6 +51,7 @@ export const albums: Album[] = [
         album: "Cosmic Drift",
         duration: "3:45",
         imageId: "album-1",
+        audioUrl: 'https://storage.googleapis.com/ci-v2-dev-central-0-1234-app-assets-us-central1/Starlight_Serenade.mp3'
       },
       {
         id: "song-2",
@@ -58,6 +60,7 @@ export const albums: Album[] = [
         album: "Cosmic Drift",
         duration: "4:12",
         imageId: "album-1",
+        audioUrl: 'https://storage.googleapis.com/ci-v2-dev-central-0-1234-app-assets-us-central1/Nebula_Dreams.mp3'
       },
     ],
   },
@@ -74,6 +77,7 @@ export const albums: Album[] = [
         album: "Midnight Garden",
         duration: "2:58",
         imageId: "album-2",
+        audioUrl: 'https://storage.googleapis.com/ci-v2-dev-central-0-1234-app-assets-us-central1/Moonpetal.mp3'
       },
     ],
   },
@@ -90,6 +94,7 @@ export const albums: Album[] = [
         album: "Chasing the Sun",
         duration: "5:02",
         imageId: "album-3",
+        audioUrl: 'https://storage.googleapis.com/ci-v2-dev-central-0-1234-app-assets-us-central1/First_Light.mp3'
       },
     ],
   },
@@ -106,6 +111,7 @@ export const albums: Album[] = [
         album: "Faded Photographs",
         duration: "3:15",
         imageId: "album-4",
+        audioUrl: 'https://storage.googleapis.com/ci-v2-dev-central-0-1234-app-assets-us-central1/Dusty_Roads.mp3'
       },
     ],
   },

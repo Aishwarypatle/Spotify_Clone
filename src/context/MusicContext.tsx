@@ -7,6 +7,7 @@ import React, {
   useState,
   ReactNode,
   useEffect,
+  useRef,
 } from "react";
 
 interface MusicContextType {
@@ -23,34 +24,67 @@ export const MusicProvider = ({ children }: { children: ReactNode }) => {
   const [currentSong, setCurrentSong] = useState<Song | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    audioRef.current = new Audio();
+
+    const audio = audioRef.current;
+
+    const setAudioData = () => {
+      if (audio) {
+        const duration = audio.duration;
+        if (duration) {
+          // The duration has been updated, you can use it
+        }
+      }
+    };
+    
+    const setAudioTime = () => {
+      if (audio) {
+         setProgress((audio.currentTime / audio.duration) * 100);
+      }
+    };
+
+    audio.addEventListener("loadeddata", setAudioData);
+    audio.addEventListener("timeupdate", setAudioTime);
+
+    audio.onended = () => {
+      setIsPlaying(false);
+      setProgress(100);
+    }
+
+    return () => {
+      audio.removeEventListener("loadeddata", setAudioData);
+      audio.removeEventListener("timeupdate", setAudioTime);
+      audio.pause();
+    };
+
+  }, []);
 
   const playSong = (song: Song) => {
-    setCurrentSong(song);
-    setIsPlaying(true);
-    setProgress(0);
+    if (audioRef.current) {
+      if (currentSong?.id !== song.id) {
+        setCurrentSong(song);
+        audioRef.current.src = song.audioUrl;
+        setProgress(0);
+      }
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
   };
 
   const togglePlayPause = () => {
-    if (currentSong) {
+    if (currentSong && audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
       setIsPlaying(!isPlaying);
     }
   };
 
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isPlaying && currentSong) {
-      interval = setInterval(() => {
-        setProgress((prev) => {
-          if (prev >= 100) {
-            setIsPlaying(false);
-            return 100;
-          }
-          return prev + 1;
-        });
-      }, 1000); // Simulate progress, 1% per second
-    }
-    return () => clearInterval(interval);
-  }, [isPlaying, currentSong]);
 
   return (
     <MusicContext.Provider
