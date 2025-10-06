@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "album-1",
+      "description": "Abstract colorful waves",
+      "imageUrl": "https://images.unsplash.com/photo-1676676701269-65de47175adf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMHdhdmVzfGVufDB8fHx8MTc1OTc0OTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract waves"
+    },
+    {
+      "id": "album-2",
+      "description": "Neon city night scape",
+      "imageUrl": "https://images.unsplash.com/photo-1514439827219-9137a0b99245?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxuZW9uJTIwY2l0eXxlbnwwfHx8fDE3NTk2OTg3Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neon city"
+    },
+    {
+      "id": "album-3",
+      "description": "Minimalist geometric patterns",
+      "imageUrl": "https://images.unsplash.com/photo-1616080808758-b8a2fc2ec5d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxnZW9tZXRyaWMlMjBwYXR0ZXJuc3xlbnwwfHx8fDE3NTk3MDc3NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "geometric patterns"
+    },
+    {
+      "id": "album-4",
+      "description": "Dreamy pastel clouds",
+      "imageUrl": "https://images.unsplash.com/photo-1623551729703-27dde0ab431d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwYXN0ZWwlMjBjbG91ZHN8ZW58MHx8fHwxNzU5NzYwOTE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pastel clouds"
+    },
+    {
+      "id": "album-5",
+      "description": "Vintage vinyl record",
+      "imageUrl": "https://images.unsplash.com/photo-1602848597239-b63398805e3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx2aW55bCUyMHJlY29yZHxlbnwwfHx8fDE3NTk2OTk2MTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vinyl record"
+    },
+    {
+      "id": "album-6",
+      "description": "Forest silhouette at sunset",
+      "imageUrl": "https://images.unsplash.com/photo-1687357282977-52f8b1dd2730?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmb3Jlc3QlMjBzdW5zZXR8ZW58MHx8fHwxNzU5NzYwOTE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "forest sunset"
+    },
+    {
+      "id": "artist-1",
+      "description": "Portrait of a female singer",
+      "imageUrl": "https://images.unsplash.com/photo-1563681543778-002ee8f3cd8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmZW1hbGUlMjBzaW5nZXJ8ZW58MHx8fHwxNzU5NzU1ODEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female singer"
+    },
+    {
+      "id": "artist-2",
+      "description": "Portrait of a male guitarist",
+      "imageUrl": "https://images.unsplash.com/photo-1615661826918-aa1438a9ec80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwZ3VpdGFyaXN0fGVufDB8fHx8MTc1OTc2MDkyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male guitarist"
+    },
+    {
+      "id": "artist-3",
+      "description": "Electronic music DJ with headphones",
+      "imageUrl": "https://images.unsplash.com/photo-1692176548571-86138128e36c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtdXNpYyUyMGRqfGVufDB8fHx8MTc1OTc2MDkxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "music dj"
+    },
+    {
+      "id": "artist-4",
+      "description": "Band performing on stage",
+      "imageUrl": "https://images.unsplash.com/photo-1731998423450-6ca1c2b04ad4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxiYW5kJTIwc3RhZ2V8ZW58MHx8fHwxNzU5NzI4MTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "band stage"
+    }
+  ]
 }
